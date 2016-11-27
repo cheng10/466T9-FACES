@@ -55,7 +55,7 @@ for key, value in ordered_res.items():
     ordered_res[key] = value / 4
 
 with open('res.csv', 'wb') as csvfile:
-    spamwriter = csv.writer(csvfile, delimiter=' ',
+    spamwriter = csv.writer(csvfile, delimiter=',',
                             quotechar='|', quoting=csv.QUOTE_MINIMAL)
     for key,value in ordered_res.iteritems():
         spamwriter.writerow([key, value])
