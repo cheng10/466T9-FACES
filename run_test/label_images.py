@@ -41,8 +41,11 @@ with tf.Session() as sess:
 
 print res
 
+for i in range(283, 476):
+    writer_res[i] = 0
+
 for key, value in res.iteritems():
-    writer_res[key[0:4]] += value
+    writer_res[int(key[1:4])] += value
 print writer_res 
 
 ordered_res = collections.OrderedDict(sorted(writer_res.items()))
